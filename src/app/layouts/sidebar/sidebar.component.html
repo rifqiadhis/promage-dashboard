@@ -1,0 +1,13 @@
+<aside class="sidebar" [ngClass]="{'collapsed': isCollapsed}">
+    <button (click)="toggleSidebar()" class="toggle-btn">
+        <span *ngIf="!isCollapsed">Collapse</span>
+        <span *ngIf="isCollapsed">Expand</span>
+    </button>
+    <nav *ngIf="!isCollapsed">
+        <ul>
+            <li *ngFor="let item of sidebarItems">
+                <a [routerLink]="item.route" routerLinkActive="active">{{ item.title }}</a>
+            </li>
+        </ul>
+    </nav>
+</aside>

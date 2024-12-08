@@ -4,3 +4,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'AeonikProTrial', sans-serif;
+}
+
+
+@font-face {
+    font-family: 'AeonikProTrial';
+    src: url('assets/fonts/aeonikprotrial-light.otf') format('opentype');
+    font-weight: 300;
+    /* Light weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AeonikProTrial';
+    src: url('assets/fonts/aeonikprotrial-regular.otf') format('opentype');
+    font-weight: 400;
+    /* Regular weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AeonikProTrial';
+    src: url('assets/fonts/aeonikprotrial-bold.otf') format('opentype');
+    font-weight: 700;
+    /* Bold weight */
+    font-style: normal;
+}

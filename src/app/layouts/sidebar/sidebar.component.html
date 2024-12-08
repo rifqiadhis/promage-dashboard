@@ -1,12 +1,19 @@
 <aside class="sidebar" [ngClass]="{'collapsed': isCollapsed}">
+    <a href="" class="logo">
+        <img src="assets/images/logo-icon.png" alt="Promage logo">
+        <h1 *ngIf="!isCollapsed">Promage</h1>
+    </a>
     <button (click)="toggleSidebar()" class="toggle-btn">
-        <span *ngIf="!isCollapsed">Collapse</span>
-        <span *ngIf="isCollapsed">Expand</span>
+        <span *ngIf="isCollapsed">&#x276F;</span> <!-- Right Arrow -->
+        <span *ngIf="!isCollapsed">&#x276E;</span> <!-- Left Arrow -->
     </button>
-    <nav *ngIf="!isCollapsed">
+    <nav class="sidebar-items">
         <ul>
             <li *ngFor="let item of sidebarItems">
-                <a [routerLink]="item.route" routerLinkActive="active">{{ item.title }}</a>
+                <div class="sidebar-item">
+                    <img [src]="'assets/icons/' + item.icon + '.svg'" class="icon" alt="{{ item.title }} icon">
+                    <a [routerLink]="item.route" routerLinkActive="active" *ngIf="!isCollapsed">{{ item.title }}</a>
+                </div>
             </li>
         </ul>
     </nav>

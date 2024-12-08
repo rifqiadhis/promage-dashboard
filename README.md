@@ -1,4 +1,8 @@
-# PromageDashboard
+# Promage Dashboard
+This project uses a design sourced from the Figma Community. The design serves as the foundation for this dashboard, offering a clean and user-friendly interface for managing project-related tasks and data.
+
+#Design Credit
+[Figma Community](https://www.figma.com/community/file/1252141522555715905/project-management-dashboard-free).
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
 

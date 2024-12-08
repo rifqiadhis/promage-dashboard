@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 export class CardDataService {
     getCards() {
         return [
-            { title: 'Users', value: 1200 },
-            { title: 'Sales', value: '$25,000' },
-            { title: 'Orders', value: 450 },
-            { title: 'Active Sessions', value: 75 }
+            { title: 'Total Revenue', value: "$53,009", subvalue: '', lastMonth: '+12%', icon: 'chart', iconBgColor: '#D398E7' },
+            { title: 'Projects', value: '95', subvalue: '/100', lastMonth: '-12%', icon: 'briefcase', iconBgColor: '#E89271' },
+            { title: 'Time Spent', value: "1022 ", subvalue: '/1300 Hrs', lastMonth: '+8%', icon: 'clock', iconBgColor: '#70A1E5' },
+            { title: 'Resources', value: "101 ", subvalue: '/120', lastMonth: '+2%', icon: 'layer', iconBgColor: '#F0C274' }
         ];
     }
 }

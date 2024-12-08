@@ -1,4 +1,11 @@
 <div class="card">
-    <h3>{{ data.title }}</h3>
-    <p>{{ data.value }}</p>
+    <div class="card-icon" [ngStyle]="{'background-color': data.iconBgColor}">
+        <img [src]="'assets/icons/' + data.icon + '.svg'" alt="{{ data.title }} icon">
+    </div>
+    <h5>{{ data.title }}</h5>
+    <div class="value-group">
+        <h1>{{ data.value }}</h1>
+        <h3 class="ml-1">{{ data.subvalue }}</h3>
+    </div>
+    <p>{{ data.lastMonth }} {{ data.lastMonth.charAt(0) === '+' ? "increase" : "decrease" }} from last month</p>
 </div>

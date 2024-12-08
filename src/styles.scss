@@ -9,6 +9,50 @@ body {
     font-family: 'AeonikProTrial', sans-serif;
 }
 
+.flex {
+    display: flex;
+}
+
+@mixin generate-margin-classes($property, $values) {
+    @each $value, $size in $values {
+        @if $property =='ml' {
+            .ml-#{$value} {
+                margin-left: $size;
+            }
+        }
+
+        @else if $property =='mr' {
+            .mr-#{$value} {
+                margin-right: $size;
+            }
+        }
+
+        @else if $property =='mt' {
+            .mt-#{$value} {
+                margin-top: $size;
+            }
+        }
+
+        @else if $property =='mb' {
+            .mb-#{$value} {
+                margin-bottom: $size;
+            }
+        }
+    }
+}
+
+$margin-values: (
+    1: 0.5rem,
+    2: 1rem,
+    3: 1.5rem,
+    4: 2rem
+);
+
+@include generate-margin-classes('ml', $margin-values);
+@include generate-margin-classes('mr', $margin-values);
+@include generate-margin-classes('mt', $margin-values);
+@include generate-margin-classes('mb', $margin-values);
+
 
 @font-face {
     font-family: 'AeonikProTrial';
